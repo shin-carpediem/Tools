@@ -1,0 +1,26 @@
+{% extends 'base.j2' %}
+{% block content %}
+<form action="/get_followers" method="post" class="pb-4">
+  <div>
+    <p class="title">入力 user の pet をフォローしている他 user 一覧</p>
+    <input class="mb-3 p-1" name="email" type="text" placeholder="abc@gmail.com" maxlength=100 />
+  </div>
+  {% include "components/create_csv_btn.j2" %}
+</form>
+<form action="/get_dogs_i_followed" method="post" class="pb-4">
+  <div>
+    <p class="title">入力 user がフォローしている pet 一覧</p>
+    <input class="mb-3 p-1" name="email" type="text" placeholder="abc@gmail.com" maxlength=100 />
+  </div>
+  {% include "components/create_csv_btn.j2" %}
+</form>
+<form action="/get_users_follow_dog" method="post" class="pb-4">
+  <div>
+    <p class="title">1匹以上の pet をフォローしている user 一覧</p>
+  </div>
+  {% include "components/create_csv_btn.j2" %}
+</form>
+<div class="mt-3">
+  {% include "components/back_link.j2" %}
+</div>
+{% endblock %}

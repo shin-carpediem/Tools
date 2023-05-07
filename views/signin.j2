@@ -1,0 +1,18 @@
+{% extends 'base.j2' %}
+{% block content %}
+<form class="row" action="/signin" method="post">
+  <div class="col-8">
+    <div class="row">
+      <p class="col-4">Username:</p>
+      <input class="col-8" name="username" type="text" required />
+    </div>
+    <div class="row pt-2">
+      <p class="col-4">Password:</p>
+      <input class="col-8" name="password" type="password" required />
+    </div>
+  </div>
+  <div class="col-4 d-flex align-items-center">
+    <input class="btn btn-dark" value="サインイン" type="submit" />
+  </div>
+</form>
+{% endblock %}

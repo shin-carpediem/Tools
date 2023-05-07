@@ -1,0 +1,17 @@
+{% extends 'base.j2' %}
+{% block content %}
+<form action="/update_user_email" method="post">
+  <div>
+    <p class="title">user の email を更新する</p>
+    <input class="mb-3 p-1" name="currrent_email" type="text" placeholder="abc@gmail.com" maxlength=100 required />
+    <div class="px-5 mx-3">
+      <p>更新↓</p>
+    </div>
+    <input class="p-1" name="upcomming_email" type="text" placeholder="xyz@gmail.com" maxlength=100 required />
+  </div>
+  <input class="btn btn-danger my-3" value="更新する" type="submit" />
+</form>
+<div class="mt-3">
+  {% include "components/back_link.j2" %}
+</div>
+{% endblock %}
